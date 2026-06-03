@@ -1,50 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="plugin" version="4.0" group="content" method="upgrade">
-    <name>Content - RinMeta</name>
+<extension type="plugin" version="5.0" group="system" method="upgrade">
+    <name>System - RinMeta</name>
     <author>Rinenweb</author>
-    <creationDate>2023-12-11</creationDate>
+    <creationDate>2026-06-03</creationDate>
     <license>GNU GPL v3</license>
     <authorEmail>info@rinenweb.eu</authorEmail>
     <authorUrl>https://www.rinenweb.eu</authorUrl>
-    <version>1.0</version>
-    <description>PLG_RINMETA_XML_DESC</description>
+    <version>1.1</version>
+    <description>PLG_SYSTEM_RINMETA_XML_DESC</description>
 
     <files>
         <filename plugin="rinmeta">rinmeta.php</filename>
         <folder>language</folder>
     </files>
-	 <languages folder="language">
-        <language tag="en-GB">en-GB/plg_content_rinmeta.ini</language>
-        <language tag="en-GB">en-GB/plg_content_rinmeta.sys.ini</language>
-        <language tag="el-GR">el-GR/el-GR.plg_content_rinmeta.ini</language>
-		<language tag="el-GR">el-GR/el-GR.plg_content_rinmeta.sys.ini</language>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/plg_system_rinmeta.ini</language>
+        <language tag="en-GB">en-GB/plg_system_rinmeta.sys.ini</language>
+        <language tag="el-GR">el-GR/el-GR.plg_system_rinmeta.ini</language>
+        <language tag="el-GR">el-GR/el-GR.plg_system_rinmeta.sys.ini</language>
     </languages>
+
     <config>
         <fields name="params">
             <fieldset name="basic">
                 <field
+                        name="include_articles"
+                        type="list"
+                        default="1"
+                        label="PLG_SYSTEM_RINMETA_INCLUDE_ARTICLES_LABEL"
+                        description="PLG_SYSTEM_RINMETA_INCLUDE_ARTICLES_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="include_homepage"
+                        type="list"
+                        default="0"
+                        label="PLG_SYSTEM_RINMETA_INCLUDE_HOMEPAGE_LABEL"
+                        description="PLG_SYSTEM_RINMETA_INCLUDE_HOMEPAGE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
                         name="twitteraccount"
                         type="text"
                         default=""
-                        label="PLG_RINMETA_ACCOUNT_LABEL"
-                        description="PLG_RINMETA_ACCOUNT_DESC"
+                        label="PLG_SYSTEM_RINMETA_ACCOUNT_LABEL"
+                        description="PLG_SYSTEM_RINMETA_ACCOUNT_DESC"
                         size="10" />
                 <field
                         name="type"
                         type="list"
                         default="summary"
-                        label="PLG_RINMETA_TYPE_LABEL"
-                        description="PLG_RINMETA_TYPE_DESC">
-                    <option value="summary">PLG_RINMETA_SUMMARY_CARD</option>
-                    <option value="summary_large_image">PLG_RINMETA_SUMMARY_CARD_LARGE_IMAGE</option>
+                        label="PLG_SYSTEM_RINMETA_TYPE_LABEL"
+                        description="PLG_SYSTEM_RINMETA_TYPE_DESC">
+                    <option value="summary">PLG_SYSTEM_RINMETA_SUMMARY_CARD</option>
+                    <option value="summary_large_image">PLG_SYSTEM_RINMETA_SUMMARY_CARD_LARGE_IMAGE</option>
                 </field>
-                <field name="facebookappid" type="text" label="PLG_RINMETA_APPID_LABEL" description="PLG_RINMETA_APPID_LABEL_DESC" size="10" />
+                <field
+                        name="facebookappid"
+                        type="text"
+                        label="PLG_SYSTEM_RINMETA_APPID_LABEL"
+                        description="PLG_SYSTEM_RINMETA_APPID_LABEL_DESC"
+                        size="10" />
+                <field
+                        name="homepage_title"
+                        type="text"
+                        label="PLG_SYSTEM_RINMETA_HOMEPAGE_TITLE_LABEL"
+                        description="PLG_SYSTEM_RINMETA_HOMEPAGE_TITLE_DESC"
+                        showon="include_homepage:1" />
+                <field
+                        name="homepage_description"
+                        type="textarea"
+                        rows="3"
+                        label="PLG_SYSTEM_RINMETA_HOMEPAGE_DESC_LABEL"
+                        description="PLG_SYSTEM_RINMETA_HOMEPAGE_DESC_DESC"
+                        showon="include_homepage:1" />
+                <field
+                        name="homepage_image"
+                        type="media"
+                        label="PLG_SYSTEM_RINMETA_HOMEPAGE_IMAGE_LABEL"
+                        description="PLG_SYSTEM_RINMETA_HOMEPAGE_IMAGE_DESC"
+                        showon="include_homepage:1" />
+                <field
+                        name="default_image"
+                        type="media"
+                        label="PLG_SYSTEM_RINMETA_DEFAULT_IMAGE_LABEL"
+                        description="PLG_SYSTEM_RINMETA_DEFAULT_IMAGE_DESC" />
             </fieldset>
         </fields>
     </config>
-
-    <updateservers>
-	<server type="extension" name="Rinmeta Plugin updates">https://raw.githubusercontent.com/rinenweb/plg_content_rinmeta/main/manifest.xml</server>
-    </updateservers>
-
 </extension>
