@@ -1,11 +1,12 @@
 ## RinMeta Plugin
 # description
-RinMeta is a versatile Joomla content plugin designed to enhance your website's social media presence. It automatically generates Twitter and Open Graph meta tags for your articles, optimizing how your content appears when shared on social platforms like X (former Twitter) and Facebook. The plugin extracts information from the article's attributes: title, intro text and images, ensuring a consistent representation across social media.
+RinMeta is a versatile Joomla system plugin designed to enhance your website's social media presence. It automatically generates Twitter and Open Graph meta tags for your articles, optimizing how your content appears when shared on social platforms like X (former Twitter) and Facebook. The plugin extracts information from the article's attributes: title, intro text and images, ensuring a consistent representation across social media.
 
 # Requirements
 ADALinker Plugin is fairly simple and will (hopefully) play nice with:
 - [x] Joomla 4.X
 - [x] Joomla 5.X
+- [x] Joomla 6.X
 - [x] PHP 7.2+
 - [x] PHP 8.0+
 
@@ -14,14 +15,13 @@ ADALinker Plugin is fairly simple and will (hopefully) play nice with:
 + Navigate to the Joomla administrator panel.
 + Go to System -> Install -> Extensions.
 + Upload and install the plugin package.
-+ Find the "Content - RinMeta" Plugin in System -> Plugins and enable it.
++ Find the "System - RinMeta" Plugin in System -> Plugins and enable it.
 
 # Usage
 Once installed and enabled, RinMeta Plugin works seamlessly in the background. Simply create or update your articles as usual, and RinMeta will automatically generate the necessary Twitter and Open Graph meta tags. Share your articles on social media, and enjoy an optimized presentation with engaging titles, descriptions and images.
 
 # Screenshot
-![RinMeta Joomla Plugin](https://github.com/rinenweb/plg_content_rinmeta/assets/17462686/0c07261a-37b4-45bf-90c2-8b40d89744b3)
-
+![RinMeta Joomla Plugin]<img width="1233" height="845" alt="Plugins_System_-_RinMeta_-_Rinenweb" src="https://github.com/user-attachments/assets/cca57a40-26c7-47d4-8e26-9ae48cbbe33d" />
 
 
 # Settings
