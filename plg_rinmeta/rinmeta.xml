@@ -109,4 +109,7 @@
             </fieldset>
         </fields>
     </config>
+    <updateservers>
+	<server type="extension" name="Rinmeta Plugin updates">https://raw.githubusercontent.com/rinenweb/plg_content_rinmeta/main/manifest.xml</server>
+    </updateservers>
 </extension>
