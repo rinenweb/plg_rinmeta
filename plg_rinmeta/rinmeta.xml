@@ -2,11 +2,11 @@
 <extension type="plugin" version="5.0" group="system" method="upgrade">
     <name>System - RinMeta</name>
     <author>Rinenweb</author>
-    <creationDate>2026-06-03</creationDate>
+    <creationDate>2026-07-20</creationDate>
     <license>GNU GPL v3</license>
     <authorEmail>info@rinenweb.eu</authorEmail>
     <authorUrl>https://www.rinenweb.eu</authorUrl>
-    <version>1.1</version>
+    <version>1.2</version>
     <description>PLG_SYSTEM_RINMETA_XML_DESC</description>
 
     <files>
@@ -30,6 +30,16 @@
                         default="1"
                         label="PLG_SYSTEM_RINMETA_INCLUDE_ARTICLES_LABEL"
                         description="PLG_SYSTEM_RINMETA_INCLUDE_ARTICLES_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="article_meta"
+                        type="list"
+                        default="1"
+                        label="PLG_SYSTEM_RINMETA_ARTICLE_META_LABEL"
+                        description="PLG_SYSTEM_RINMETA_ARTICLE_META_DESC"
+                        showon="include_articles:1">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
@@ -64,6 +74,14 @@
                         label="PLG_SYSTEM_RINMETA_APPID_LABEL"
                         description="PLG_SYSTEM_RINMETA_APPID_LABEL_DESC"
                         size="10" />
+                <field
+                        name="desc_limit"
+                        type="number"
+                        default="159"
+                        min="80"
+                        max="300"
+                        label="PLG_SYSTEM_RINMETA_DESC_LIMIT_LABEL"
+                        description="PLG_SYSTEM_RINMETA_DESC_LIMIT_DESC" />
                 <field
                         name="homepage_title"
                         type="text"
