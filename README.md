@@ -3,7 +3,7 @@
 RinMeta is a versatile Joomla system plugin designed to enhance your website's social media presence. It automatically generates Twitter and Open Graph meta tags for your articles, optimizing how your content appears when shared on social platforms like X (former Twitter) and Facebook. The plugin extracts information from the article's attributes: title, intro text and images, ensuring a consistent representation across social media.
 
 ## Requirements
-ADALinker Plugin is fairly simple and will (hopefully) play nice with:
+RinMeta Plugin is fairly simple and will (hopefully) play nice with:
 - [x] Joomla 4.X
 - [x] Joomla 5.X
 - [x] Joomla 6.X
